@@ -42,7 +42,18 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
-
+  if array1.count == 0
+    puts "true"
+    else
+    puts "false"
+    
+    end
+    
+  if array2.count == 0
+    puts "true"
+    else
+    puts "false"
+    end    
 end
 
 def q6
