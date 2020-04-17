@@ -58,6 +58,7 @@ def q7
 
   # 以下に回答を記載
 
+   array.map!{|n|n.to_i}
   # 以下は変更しないで下さい
   p array
 end
