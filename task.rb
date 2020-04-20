@@ -88,7 +88,12 @@ def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
-  p foods.include?("うに")  ?   "好物です" :  "まぁまぁ好きです"
+  foods .each do |food|
+
+    puts food.include?("うに")  ?   "#{food}　は好物です" :  "#{food}　はまぁまぁ好きです"
+   
+   end
+  
 end
 
 def q11
