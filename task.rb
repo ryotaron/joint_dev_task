@@ -188,7 +188,7 @@ end
 
 class UserQ18
   # 以下に回答を記載
-  attr_accessor :name ,:age
+  # attr_accessor :name ,:age
   def initialize(name:,age:)
     @name = name
     @age = age
@@ -204,7 +204,7 @@ end
 
 def q18
   # ここは変更しないで下さい
-  user1 = UserQ18.new(name: "中村", age: 32)
+  user1 = UserQ18.new(name: "あじー", age: 32)
   user2 = UserQ18.new(name: "ゆたぼん", age: 10)
 
   puts user1.introduce
