@@ -188,7 +188,7 @@ end
 
 class UserQ18
   # 以下に回答を記載
-  # attr_accessor :name ,:age
+  
   def initialize(name:,age:)
     @name = name
     @age = age
