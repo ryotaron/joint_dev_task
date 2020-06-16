@@ -194,10 +194,10 @@ class UserQ18
     @age = age
   end
   def introduce
-    if @age > 30
-         puts "こんにちは,#{@name}と申します。よろしくお願いします"
-    else
-        puts  "はいさいまいど〜#{@name}です！！"
+    if @age >= 20
+      print "こんにちは,#{@name}と申します。よろしくお願いします"
+    else @age < 20
+      print  "はいさいまいど〜#{@name}です！！"
     end
   end
 end
