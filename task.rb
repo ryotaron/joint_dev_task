@@ -230,22 +230,10 @@ end
 class UserQ20
   
   # 以下に回答を記載
-    attr_accessor :name :age
+    attr_reader :name, :age
   def initialize(name:,age:)
     @name = name
     @age = age  
-  end
-
-  def info_entry_fee
-    if @age >0 && @age <4
-      infant
-    elsif @age >6 && @age <12
-      children
-    elsif @age >13 && @age <64
-        adult
-    else @age < 120
-      senior
-    end
   end
 
 end
@@ -255,6 +243,24 @@ class Zoo
   def initialize (name:,entry_fee:)
     @name = name
     @entry_fee = entry_fee 
+  end
+
+def info_entry_fee(user)
+    
+    price = case user.age 
+            when 0..4
+              @entry_fee[:infant] 
+            when 5..12
+              @entry_fee[:children]  
+            when 13..64
+              @entry_fee[:adult]  
+            when 65..120
+              @entry_fee[:senior]  
+            end
+
+    puts "#{user.name}さんの料金は　#{price} 円です"
+    # puts "#{$name}さんの料金は　#{price} 円です。"
+    end
 
 end
 
