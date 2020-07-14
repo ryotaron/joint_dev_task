@@ -231,18 +231,18 @@ class UserQ20
   
   # 以下に回答を記載
     attr_reader :name, :age
-  def initialize(name:,age:)
-    @name = name
-    @age = age  
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
   end
 
 end
 
 class Zoo
   # 以下に回答を記載
-  def initialize (name:,entry_fee:)
-    @name = name
-    @entry_fee = entry_fee 
+  def initialize (**params)
+    @name = params[:name]
+    @entry_fee = params [:entry_fee] 
   end
 
 def info_entry_fee(user)
